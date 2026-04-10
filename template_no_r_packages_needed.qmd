@@ -1,0 +1,182 @@
+---
+title: "Titel des Aufsatzes"
+author:
+  - name: "Vorname Nachname"
+date: today
+
+# Institutionelle Angaben
+institution: "Musterhochschule"
+department: "Studiengang XYZ"
+course: "Einführung in die Raketenwissenschaft (SoSe 2026)"
+supervisor: "Prof. Dr. Musterfrau"
+student-id: "0012345"
+
+# R-Optionen:
+execute:
+  cache: true
+  echo: false
+  message: false
+  warning: false
+
+# Formatoptionen
+lang: de
+bibliography: referenzen.bib
+csl: apa.csl
+citeproc: true
+logo: "logo.png"
+
+format:
+  aufsatz-typst:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    paper-size: a4
+    font: "Linux Libertine"
+  docx:
+    toc: true
+    reference-doc: reference.docx
+
+# Abstract erscheint auf eigener Seite vor dem Inhaltsverzeichnis
+abstract: |
+  Hier steht eine kurze Zusammenfassung (Abstract) des Aufsatzes.
+  Der Abstract sollte den zentralen Inhalt, die Fragestellung und
+  die wichtigsten Ergebnisse des Aufsatzes in komprimierter Form
+  darstellen (ca. 150–200 Wörter).
+---
+
+
+
+
+
+
+
+
+
+
+
+# Einleitung
+
+Hier beginnt der Hauptteil des Aufsatzes. Die Einleitung führt in das Thema ein, benennt die Forschungsfrage und gibt einen Überblick über den Aufbau der Arbeit.
+
+Wissenschaftliche Texte zeichnen sich durch klare Argumentation und sorgfältige Quellenangaben aus [@musterautor2023]. Jede Behauptung sollte durch Belege oder logische Schlussfolgerungen gestützt werden.
+
+{{< pagebreak >}}
+
+# Theoretischer Hintergrund
+
+## Grundlegende Konzepte
+
+In diesem Abschnitt werden die theoretischen Grundlagen des Themas erläutert. Es empfiehlt sich, einschlägige Fachliteratur zu zitieren und die verwendeten Begriffe klar zu definieren.
+
+@fig-bild1 zeigt ein Bild.
+
+![Hier steht die Beschriftung des Bilds](bild.png){#fig-bild1 width=25%}
+
+## Stand der Forschung
+
+Der aktuelle Forschungsstand zeigt, dass die hier untersuchte Fragestellung von verschiedenen Perspektiven betrachtet werden kann [@weitererautorin2021].
+
+{{< pagebreak >}}
+
+# Methodik
+
+Dieser Abschnitt beschreibt das methodische Vorgehen. Bei empirischen Arbeiten gehören hierher: Forschungsdesign, Stichprobe, Erhebungsmethoden und Auswertungsverfahren.
+
+## Forschungsdesign
+
+Das gewählte Forschungsdesign wird hier begründet und erläutert.
+
+## Datenerhebung
+
+Die Methoden der Datenerhebung werden detailliert beschrieben.
+
+{{< pagebreak >}}
+
+# Ergebnisse
+
+```{r}
+# include: false
+#source("analyse.R")
+```
+
+
+
+In diesem Abschnitt werden die Ergebnisse der Untersuchung dargestellt. Tabellen und Abbildungen können den Text ergänzen und komplexe Sachverhalte veranschaulichen.
+
+## Deskriptive Analyse
+
+Die Verteilung der AV in @tbl-deskriptiv zeigt, dass ...
+
+
+
++----------+------+----+-----+-----+-----+----------+----------+-----+-----------+
+| Variable | Mean | SD | IQR | Min | Max | Skewness | Kurtosis | n   | n_Missing |
++==========+======+====+=====+=====+=====+==========+==========+=====+===========+
+| total_pr | 50   | 26 | 13  | 29  | 327 | 9        | 96       | 143 | 0         |
++----------+------+----+-----+-----+-----+----------+----------+-----+-----------+ 
+
+: Die Verteilung der AV {#tbl-deskriptiv}
+
+
+
+
+
+
+```{r}
+#| echo: false
+#| message: false
+#| label: fig-mtcars1
+#| eval: false
+#| out-width: 50%
+#| fig-cap: "Die Verteilung der abhängigen Variable zeigt ..."
+
+ggdensity(mariokart, x = "total_pr")
+```
+
+## Hypothese 1
+
+Laut Hypothese 1 gilt $\beta_1 > 0$ ...
+
+Mit den R-Paket `tinytable` kann man schöne Tabellen erstellen,
+s. @tbl-hyp1.
+
+
++-------------+-------------+------+------+--------+---------+-------+----------+------+
+| Parameter   | Coefficient | SE   | CI   | CI_low | CI_high | t     | df_error | p    |
++=============+=============+======+======+========+=========+=======+==========+======+
+| (Intercept) | 52.66       | 3.61 | 0.95 | 45.52  | 59.8    | 14.58 | 140      | 0    |
++-------------+-------------+------+------+--------+---------+-------+----------+------+
+| condused    | -6.44       | 4.36 | 0.95 | -15.05 | 2.17    | -1.48 | 140      | 0.14 |
++-------------+-------------+------+------+--------+---------+-------+----------+------+
+| start_pr    | 0.11        | 0.14 | 0.95 | -0.17  | 0.4     | 0.8   | 140      | 0.43 |
++-------------+-------------+------+------+--------+---------+-------+----------+------+ 
+
+: Modellparameter für Modell 1 {#tbl-hyp1}
+
+
+Die Modellparameter sind in @fig-hyp1 dargestellt.
+
+![95%-Kondideinzintervalle für die Parameter aus Modell 1](fig-hyp1.png)
+
+
+
+{{< pagebreak >}}
+
+{{< include 05-diskussion.qmd >}}
+
+
+# Literaturverzeichnis {.unnumbered}
+
+::: {#refs}
+:::
+
+{{< pagebreak >}}
+
+# Anhang A: R-Syntax {.unnumbered}
+
+
+Die R-Syntax ist im Ordner `R` abgelegt.
+
+#  Anhang B: Daten  {.unnumbered}
+
+Die Rohdaten zur Studie ist im Ordner `data` abgelegt.

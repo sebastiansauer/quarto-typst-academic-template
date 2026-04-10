@@ -1,10 +1,8 @@
 library(tidyverse)
 library(easystats)
-library(ggpubr)
-library(knitr)
-library(gt)
+
 library(tinytable)
-library(modelsummary)
+
 
 mariokart <- read_csv("mariokart.csv")
 
