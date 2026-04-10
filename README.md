@@ -7,10 +7,10 @@ Download this repo.
 
 # Quickstart
 
-Open the downloaded folder in RStudio or Positron.
+Open the downloaded folder in RStudio or Positron or some other text editor.
 Hit `Render` to see the rendered PDF. ![](template.png){width=25%} shows an image of the rendered version of `template_no_r_packages_needed.qmd`.
 
-You don't need any installe R packages for this example.
+You don't need any installed R packages for this example.
 
 # Template using some R packages
 
