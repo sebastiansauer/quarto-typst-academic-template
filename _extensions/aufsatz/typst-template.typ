@@ -3,6 +3,7 @@
 // Author: Sebastian Sauer
 
 
+
 #show <refs>: set par(
   first-line-indent: 0cm,
   hanging-indent: 1.27cm,
@@ -26,6 +27,7 @@
   // Metadaten des Dokuments
   title: none,
   subtitle: none,
+  logo: none,
   author: none,
   date: none,
   thesis-type: "Seminararbeit",
@@ -55,6 +57,8 @@
   section-numbering: none,
   // Inhalt (Bibliographie wird von Quarto/citeproc in den Body injiziert)
   body,
+
+  // BODY -----
 ) = {
 
   // Grundlegende Dokumenteinstellungen
@@ -150,10 +154,12 @@
 
     // Oberer Bereich: Hochschule / Fachbereich
     #align(center)[
+    // Logo oben
+      #image(logo, width: 4cm)
       #v(1.2cm)
 
       #if institution != none [
-        #text(size: 14pt, weight: "bold")[#institution]
+        #text(size: 14pt)[#institution]
         #linebreak()
       ]
 
@@ -205,9 +211,9 @@
       //[Studiengang:], [#if degree-program != none [#degree-program] else []],
      // [Fachsemester:], [#if semester != none [#semester] else []],
       //[Modul:], [#if module != none [#module] else []],
-      [Lehrveranstaltung:], [#if course != none [#course] else []],
+      //[Lehrveranstaltung:], [#if course != none [#course] else []],
       [Dozent/in:], [#safe-meta-text(supervisor)],
-      [Hochschule:], [#if institution != none [#institution] else []],
+      //[Hochschule:], [#if institution != none [#institution] else []],
       [Abgabedatum:], [
         #if date != none [#date]
       ],

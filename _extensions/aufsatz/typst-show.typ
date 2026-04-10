@@ -2,6 +2,7 @@
 
 #show: aufsatz.with(
   $if(title)$title: "$title$",$endif$
+  $if(logo)$logo: "$logo$",$endif$
   $if(subtitle)$subtitle: "$subtitle$",$endif$
   $if(by-author)$
   author: (

@@ -1,19 +1,10 @@
 title: Aufsatz
 author: Sebastian Sauer
-version: 1.0.0
+version: 1.0.1
 quarto-required: ">=1.4.0"
-# contributes:
-#   formats:
-#     typst:
-#       typst-template: typst-template.typ
-#       typst-show: typst-show.typ
-#       section-numbering: "1.1.1"
-#       toc: true
-
 contributes:
   formats:
     typst:
-      #logo: MeinLogo.png
       template-partials:
         - typst-template.typ
         - typst-show.typ

@@ -16,14 +16,18 @@ lang: de
 bibliography: referenzen.bib
 csl: apa.csl
 citeproc: true
+logo: "logo.png"
 
 format:
   aufsatz-typst:
     toc: true
     toc-depth: 3
-    section-numbering: "1.1.1"
+    number-sections: true
     paper-size: a4
     font: "Linux Libertine"
+  docx:
+    toc: true
+    reference-doc: reference.docx
 
 # Abstract erscheint auf eigener Seite vor dem Inhaltsverzeichnis
 abstract: |
@@ -108,3 +112,14 @@ ggplot(mtcars) +
 
 ::: {#refs}
 :::
+
+{{< pagebreak >}}
+
+# Anhang A: R-Syntax {.unnumbered}
+
+
+Die R-Syntax ist im Ordner `R` abgelegt.
+
+#  Anhang B: Daten  {.unnumbered}
+
+Die Rohdaten zur Studie ist im Ordner `data` abgelegt.
