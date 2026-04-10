@@ -1,0 +1,106 @@
+---
+title: "Titel des Aufsatzes"
+#subtitle: "Untertitel (optional)"
+author:
+  - name: "Vorname Nachname"
+date: "2026-04-10"
+
+# Institutionelle Angaben
+institution: "Musterhochschule"
+department: "Studiengang XYZ"
+course: "Einführung in die Raketenwissenschaft (SoSe 2026)"
+supervisor: "Prof. Dr. Musterfrau"
+student-id: "0012345"
+
+# Formatoptionen
+lang: de
+bibliography: referenzen.bib
+csl: apa.csl
+citeproc: true
+
+format:
+  aufsatz-typst:
+    toc: true
+    toc-depth: 3
+    section-numbering: "1.1.1"
+    paper-size: a4
+    font: "Linux Libertine"
+
+# Abstract erscheint auf eigener Seite vor dem Inhaltsverzeichnis
+abstract: |
+  Hier steht eine kurze Zusammenfassung (Abstract) des Aufsatzes.
+  Der Abstract sollte den zentralen Inhalt, die Fragestellung und
+  die wichtigsten Ergebnisse des Aufsatzes in komprimierter Form
+  darstellen (ca. 150–200 Wörter).
+---
+
+# Einleitung
+
+Hier beginnt der Hauptteil des Aufsatzes. Die Einleitung führt in das Thema ein, benennt die Forschungsfrage und gibt einen Überblick über den Aufbau der Arbeit.
+
+Wissenschaftliche Texte zeichnen sich durch klare Argumentation und sorgfältige Quellenangaben aus [@musterautor2023]. Jede Behauptung sollte durch Belege oder logische Schlussfolgerungen gestützt werden.
+
+{{< pagebreak >}}
+
+# Theoretischer Hintergrund
+
+## Grundlegende Konzepte
+
+In diesem Abschnitt werden die theoretischen Grundlagen des Themas erläutert. Es empfiehlt sich, einschlägige Fachliteratur zu zitieren und die verwendeten Begriffe klar zu definieren.
+
+@fig-bild1 zeigt ein Bild.
+
+![Hier steht die Beschriftung des Bilds](bild.png){#fig-bild1 width=25%}
+
+## Stand der Forschung
+
+Der aktuelle Forschungsstand zeigt, dass die hier untersuchte Fragestellung von verschiedenen Perspektiven betrachtet werden kann [@weitererautorin2021].
+
+{{< pagebreak >}}
+
+# Methodik
+
+Dieser Abschnitt beschreibt das methodische Vorgehen. Bei empirischen Arbeiten gehören hierher: Forschungsdesign, Stichprobe, Erhebungsmethoden und Auswertungsverfahren.
+
+## Forschungsdesign
+
+Das gewählte Forschungsdesign wird hier begründet und erläutert.
+
+## Datenerhebung
+
+Die Methoden der Datenerhebung werden detailliert beschrieben.
+
+{{< pagebreak >}}
+
+# Ergebnisse
+
+In diesem Abschnitt werden die Ergebnisse der Untersuchung dargestellt. Tabellen und Abbildungen können den Text ergänzen und komplexe Sachverhalte veranschaulichen.
+
+| Variable  | Mittelwert | Standardabweichung |
+|-----------|------------|--------------------|
+| Merkmal A | 3.42       | 0.87               |
+| Merkmal B | 4.15       | 1.03               |
+
+: Deskriptive Statistik der Untersuchungsvariablen {#tbl-deskriptiv}
+
+Die Ergebnisse in @tbl-deskriptiv zeigen, dass ...
+
+{{< pagebreak >}}
+
+# Diskussion
+
+Die Diskussion interpretiert die Ergebnisse im Licht des theoretischen Hintergrunds und der Forschungsfrage. Stärken und Limitationen der Arbeit werden kritisch reflektiert.
+
+Die gefundenen Ergebnisse lassen sich wie folgt interpretieren ...
+
+Einschränkungen der vorliegenden Untersuchung betreffen insbesondere ...
+
+Das Fazit fasst die wichtigsten Befunde zusammen, beantwortet die eingangs gestellte Forschungsfrage und gibt ggf. einen Ausblick auf weiterführende Forschungsfragen.
+
+{{< pagebreak >}}
+
+
+# Literaturverzeichnis {.unnumbered}
+
+::: {#refs}
+:::
