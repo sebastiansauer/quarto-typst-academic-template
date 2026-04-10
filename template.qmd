@@ -11,6 +11,13 @@ course: "Einführung in die Raketenwissenschaft (SoSe 2026)"
 supervisor: "Prof. Dr. Musterfrau"
 student-id: "0012345"
 
+# R-Optionen:
+execute:
+  cache: true
+  echo: false
+  message: false
+  warning: false
+
 # Formatoptionen
 lang: de
 bibliography: referenzen.bib
@@ -36,6 +43,16 @@ abstract: |
   die wichtigsten Ergebnisse des Aufsatzes in komprimierter Form
   darstellen (ca. 150–200 Wörter).
 ---
+
+
+
+
+
+
+
+
+
+
 
 # Einleitung
 
@@ -77,31 +94,67 @@ Die Methoden der Datenerhebung werden detailliert beschrieben.
 
 # Ergebnisse
 
+```{r}
+# include: false
+source("analyse.R")
+```
+
+
+
 In diesem Abschnitt werden die Ergebnisse der Untersuchung dargestellt. Tabellen und Abbildungen können den Text ergänzen und komplexe Sachverhalte veranschaulichen.
 
-| Variable  | Mittelwert | Standardabweichung |
-|-----------|------------|--------------------|
-| Merkmal A | 3.42       | 0.87               |
-| Merkmal B | 4.15       | 1.03               |
+## Deskriptive Analyse
 
-: Deskriptive Statistik der Untersuchungsvariablen {#tbl-deskriptiv}
+Die Verteilung der AV in @tbl-deskriptiv zeigt, dass ...
 
-Die Ergebnisse in @tbl-deskriptiv zeigen, dass ...
 
-Man kann die Ergebnisse eines R-Befehls direkt einbinden, s. @fig-mtcars1.
+```{r}
+#| echo: false
+#| label: tbl-deskriptiv
+#| tbl-cap: "Die Verteilung der AV"
+tt(desk1, digits = 2)
+```
+
+
+Die Verteilung der AV ist in @fig-mtcars1 visualisiert.
 
 ```{r}
 #| echo: false
 #| message: false
 #| label: fig-mtcars1
-#| fig-cap: "Hier sieht man ein Diagramm, das mit R erstellt wurde."
-library(tidyverse)
-data(mtcars)
-ggplot(mtcars) +
-  aes(x = hp, y = mpg) +
-  geom_point()
+#| out-width: 50%
+#| fig-cap: "Die Verteilung der abhängigen Variable zeigt ..."
 
+ggdensity(mariokart, x = "total_pr")
 ```
+
+## Hypothese 1
+
+Laut Hypothese 1 gilt $\beta_1 > 0$ ...
+
+Mit den R-Paket `tinytable` kann man schöne Tabellen erstellen,
+s. @tbl-hyp1.
+
+```{r}
+#| label: tbl-hyp1
+#| tbl-cap: "Modellparameter für Modell 1"
+
+parameters(lm_hyp1) |>  tt() |> 
+  format_tt(digits = 2, num_fmt = "decimal")
+```
+
+Die Modellparameter sind in @fig-hyp1 dargestellt.
+
+
+```{r}
+#| label: fig-hyp1
+#| fig-cap: "95%-Kondideinzintervalle für die Parameter aus Modell 1"
+
+lm_hyp1 |> parameters() |> plot()
+```
+
+
+
 
 {{< pagebreak >}}
 
