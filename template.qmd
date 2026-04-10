@@ -1,9 +1,8 @@
 ---
 title: "Titel des Aufsatzes"
-#subtitle: "Untertitel (optional)"
 author:
   - name: "Vorname Nachname"
-date: "2026-04-10"
+date: today
 
 # Institutionelle Angaben
 institution: "Musterhochschule"
@@ -85,19 +84,24 @@ In diesem Abschnitt werden die Ergebnisse der Untersuchung dargestellt. Tabellen
 
 Die Ergebnisse in @tbl-deskriptiv zeigen, dass ...
 
+Man kann die Ergebnisse eines R-Befehls direkt einbinden, s. @fig-mtcars1.
+
+```{r}
+#| echo: false
+#| message: false
+#| label: fig-mtcars1
+#| fig-cap: "Hier sieht man ein Diagramm, das mit R erstellt wurde."
+library(tidyverse)
+data(mtcars)
+ggplot(mtcars) +
+  aes(x = hp, y = mpg) +
+  geom_point()
+
+```
+
 {{< pagebreak >}}
 
-# Diskussion
-
-Die Diskussion interpretiert die Ergebnisse im Licht des theoretischen Hintergrunds und der Forschungsfrage. Stärken und Limitationen der Arbeit werden kritisch reflektiert.
-
-Die gefundenen Ergebnisse lassen sich wie folgt interpretieren ...
-
-Einschränkungen der vorliegenden Untersuchung betreffen insbesondere ...
-
-Das Fazit fasst die wichtigsten Befunde zusammen, beantwortet die eingangs gestellte Forschungsfrage und gibt ggf. einen Ausblick auf weiterführende Forschungsfragen.
-
-{{< pagebreak >}}
+{{< include 05-diskussion.qmd >}}
 
 
 # Literaturverzeichnis {.unnumbered}

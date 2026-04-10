@@ -1,0 +1,13 @@
+# Diskussion
+
+Man kann auch Kapitel einfügen in das Hauptdokument.
+
+Die Diskussion interpretiert die Ergebnisse im Licht des theoretischen Hintergrunds und der Forschungsfrage. Stärken und Limitationen der Arbeit werden kritisch reflektiert.
+
+Die gefundenen Ergebnisse lassen sich wie folgt interpretieren ...
+
+Einschränkungen der vorliegenden Untersuchung betreffen insbesondere ...
+
+Das Fazit fasst die wichtigsten Befunde zusammen, beantwortet die eingangs gestellte Forschungsfrage und gibt ggf. einen Ausblick auf weiterführende Forschungsfragen.
+
+{{< pagebreak >}}
