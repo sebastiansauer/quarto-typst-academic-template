@@ -8,7 +8,7 @@ Download this repo.
 # Quickstart
 
 Open the downloaded folder in RStudio or Positron.
-Hit `Render` to see the rendered PDF; ![](template.pdf) shows the rendered version of `template.qmd`.
+Hit `Render` to see the rendered PDF; ![](template.png) shows the rendered version of `template.qmd`.
 
 
 # Enter your text
