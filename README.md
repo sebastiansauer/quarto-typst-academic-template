@@ -33,9 +33,11 @@ quarto use template sebastiansauer/aufsatz
 Open the downloaded folder in RStudio or Positron or some other text editor.
 Hit `Render` to see the rendered PDF. 
 
-Here's an image of the rendered version of `template_no_r_packages_needed.qmd`.
+Here's an image of the [rendered PDF file](template_no_r_packages_needed.pdf) of `template_no_r_packages_needed.qmd`.
 
 <img src="template.png" width="25%">
+
+
 
 
 
