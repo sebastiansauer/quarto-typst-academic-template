@@ -2,6 +2,9 @@
 
 `aufsatz` is a Quarto extension providing a template for academic reports (such as student term papers or essays) via rendering to PDF using Typst
 
+
+
+
 # Requirements
 
 [Quarto](quarto-typst-academic-template) is needed.
@@ -82,6 +85,14 @@ In the terminal, run
 ```bash
 quarto rmeove sebastiansauer/aufsatz
 ```
+
+
+## DOI
+
+https://doi.org/10.5281/zenodo.19507006
+
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19507006.svg)](https://doi.org/10.5281/zenodo.19507006)
 
 
 ## Have fun!
