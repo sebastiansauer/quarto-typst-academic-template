@@ -1,9 +1,15 @@
-title: Aufsatz
+title: aufsatz: A Quarto template for academic reports using Typst
 author: Sebastian Sauer
 version: 1.0.1
 quarto-required: ">=1.4.0"
 contributes:
   formats:
+    common:
+      knitr:
+        opts_chunk:
+          echo: false
+      number-sections: true
+      csl: apa.csl
     typst:
       template-partials:
         - typst-template.typ
