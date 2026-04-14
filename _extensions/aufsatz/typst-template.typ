@@ -155,7 +155,7 @@
     // Oberer Bereich: Hochschule / Fachbereich
     #align(center)[
     // Logo oben
-      #image(logo, width: 4cm)
+      #if $logo$ != none and type($logo$) == str {image($logo$, width: 4cm)}
       #v(1.2cm)
 
       #if institution != none [
@@ -256,7 +256,7 @@
     outline(
       title: toc-title-text,
       depth: toc-depth,
-      indent: true,
+      indent: auto,
     )
     pagebreak()
   }
