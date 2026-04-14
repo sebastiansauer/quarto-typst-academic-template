@@ -124,7 +124,7 @@ Die Verteilung der AV ist in @fig-mtcars1 visualisiert.
 #| label: fig-mtcars1
 #| out-width: 50%
 #| fig-cap: "Die Verteilung der abhängigen Variable zeigt ..."
-
+library(ggpubr)
 ggdensity(mariokart, x = "total_pr")
 ```
 

@@ -1,6 +1,6 @@
 library(tidyverse)
 library(easystats)
-
+library(modelsummary)
 library(tinytable)
 
 
