@@ -96,7 +96,7 @@ Die Methoden der Datenerhebung werden detailliert beschrieben.
 
 ```{r}
 # include: false
-source("analyse.R")
+source("analyse.r")
 ```
 
 
